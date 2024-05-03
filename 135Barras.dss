@@ -1,0 +1,1015 @@
+//.........................................................//
+// Nombre: Franklin Jesus                       //
+// Apellidos: Simeon Pucuhuayla             //
+// SISTEMA DE PRUEBA DE 135 BARRAS  //
+// FIEE - UNI                                        //
+//........................................................//
+
+Clear  ! sempre tem isso como a primeira linha antes de definir um novo circuito
+
+Set DefaultBaseFrequency=60
+
+//-------------------------------CIRCUITO-----------------------------------------//
+new object=circuit.135_Barras
+~ BasekV=13.8  Bus1=b0  pu=1.0  MVASC3=100000   MVASC1 =100000
+
+New Line.L1  Phases=3   Bus1=b0 Bus2=b1 emergamps=10000   Length=1
+~ rmatrix = (0.33205 | 0 0.33205 | 0 0 0.33205)
+~ xmatrix = (0.76653 | 0 0.76653 | 0 0 0.76653)
+New Line.L2  Phases=3   Bus1=b1 Bus2=b2 emergamps=10000   Length=1
+~ rmatrix = (0.00188 | 0 0.00188 | 0 0 0.00188)
+~ xmatrix = (0.00433 | 0 0.00433 | 0 0 0.00433)
+New Line.L3  Phases=3   Bus1=b2 Bus2=b3 emergamps=10000   Length=1
+~ rmatrix = (0.22324 | 0 0.22324 | 0 0 0.22324)
+~ xmatrix = (0.51535 | 0 0.51535 | 0 0 0.51535)
+New Line.L4  Phases=3   Bus1=b3 Bus2=b4 emergamps=10000   Length=1
+~ rmatrix = (0.09943 | 0 0.09943 | 0 0 0.09943)
+~ xmatrix = (0.22953 | 0 0.22953 | 0 0 0.22953)
+New Line.L5  Phases=3   Bus1=b4 Bus2=b5 emergamps=10000   Length=1
+~ rmatrix = (0.15571 | 0 0.15571 | 0 0 0.15571)
+~ xmatrix = (0.35945 | 0 0.35945 | 0 0 0.35945)
+New Line.L6  Phases=3   Bus1=b5 Bus2=b6 emergamps=10000   Length=1
+~ rmatrix = (0.16321 | 0 0.16321 | 0 0 0.16321)
+~ xmatrix = (0.37677 | 0 0.37677 | 0 0 0.37677)
+New Line.L7  Phases=3   Bus1=b6 Bus2=b7 emergamps=10000   Length=1
+~ rmatrix = (0.11444 | 0 0.11444 | 0 0 0.11444)
+~ xmatrix = (0.26417 | 0 0.26417 | 0 0 0.26417)
+New Line.L8  Phases=3   Bus1=b6 Bus2=b9 emergamps=10000   Length=1
+~ rmatrix = (0.05675 | 0 0.05675 | 0 0 0.05675)
+~ xmatrix = (0.05666 | 0 0.05666 | 0 0 0.05666)
+New Line.L9  Phases=3   Bus1=b9 Bus2=b10 emergamps=10000   Length=1
+~ rmatrix = (0.52124 | 0 0.52124 | 0 0 0.52124)
+~ xmatrix = (0.27418 | 0 0.27418 | 0 0 0.27418)
+New Line.L10  Phases=3   Bus1=b9 Bus2=b12 emergamps=10000   Length=1
+~ rmatrix = (0.10877 | 0 0.10877 | 0 0 0.10877)
+~ xmatrix = (0.1086 | 0 0.1086 | 0 0 0.1086)
+New Line.L11  Phases=3   Bus1=b12 Bus2=b13 emergamps=10000   Length=1
+~ rmatrix = (0.39803 | 0 0.39803 | 0 0 0.39803)
+~ xmatrix = (0.20937 | 0 0.20937 | 0 0 0.20937)
+New Line.L12  Phases=3   Bus1=b12 Bus2=b15 emergamps=10000   Length=1
+~ rmatrix = (0.91744 | 0 0.91744 | 0 0 0.91744)
+~ xmatrix = (0.31469 | 0 0.31469 | 0 0 0.31469)
+New Line.L13  Phases=3   Bus1=b12 Bus2=b17 emergamps=10000   Length=1
+~ rmatrix = (0.11823 | 0 0.11823 | 0 0 0.11823)
+~ xmatrix = (0.11805 | 0 0.11805 | 0 0 0.11805)
+New Line.L14  Phases=3   Bus1=b17 Bus2=b18 emergamps=10000   Length=1
+~ rmatrix = (0.50228 | 0 0.50228 | 0 0 0.50228)
+~ xmatrix = (0.26421 | 0 0.26421 | 0 0 0.26421)
+New Line.L15  Phases=3   Bus1=b17 Bus2=b20 emergamps=10000   Length=1
+~ rmatrix = (0.05675 | 0 0.05675 | 0 0 0.05675)
+~ xmatrix = (0.05666 | 0 0.05666 | 0 0 0.05666)
+New Line.L16  Phases=3   Bus1=b20 Bus2=b21 emergamps=10000   Length=1
+~ rmatrix = (0.29379 | 0 0.29379 | 0 0 0.29379)
+~ xmatrix = (0.15454 | 0 0.15454 | 0 0 0.15454)
+New Line.L17  Phases=3   Bus1=b0 Bus2=b24 emergamps=10000   Length=1
+~ rmatrix = (0.33205 | 0 0.33205 | 0 0 0.33205)
+~ xmatrix = (0.76653 | 0 0.76653 | 0 0 0.76653)
+New Line.L18  Phases=3   Bus1=b24 Bus2=b25 emergamps=10000   Length=1
+~ rmatrix = (0.00188 | 0 0.00188 | 0 0 0.00188)
+~ xmatrix = (0.00433 | 0 0.00433 | 0 0 0.00433)
+New Line.L19  Phases=3   Bus1=b25 Bus2=b26 emergamps=10000   Length=1
+~ rmatrix = (0.22324 | 0 0.22324 | 0 0 0.22324)
+~ xmatrix = (0.51535 | 0 0.51535 | 0 0 0.51535)
+New Line.L20  Phases=3   Bus1=b26 Bus2=b27 emergamps=10000   Length=1
+~ rmatrix = (0.10881 | 0 0.10881 | 0 0 0.10881)
+~ xmatrix = (0.25118 | 0 0.25118 | 0 0 0.25118)
+New Line.L21  Phases=3   Bus1=b27 Bus2=b28 emergamps=10000   Length=1
+~ rmatrix = (0.71078 | 0 0.71078 | 0 0 0.71078)
+~ xmatrix = (0.37388 | 0 0.37388 | 0 0 0.37388)
+New Line.L22  Phases=3   Bus1=b27 Bus2=b29 emergamps=10000   Length=1
+~ rmatrix = (0.18197 | 0 0.18197 | 0 0 0.18197)
+~ xmatrix = (0.42008 | 0 0.42008 | 0 0 0.42008)
+New Line.L23  Phases=3   Bus1=b29 Bus2=b30 emergamps=10000   Length=1
+~ rmatrix = (0.30326 | 0 0.30326 | 0 0 0.30326)
+~ xmatrix = (0.15952 | 0 0.15952 | 0 0 0.15952)
+New Line.L24  Phases=3   Bus1=b29 Bus2=b32 emergamps=10000   Length=1
+~ rmatrix = (0.02439 | 0 0.02439 | 0 0 0.02439)
+~ xmatrix = (0.0563 | 0 0.0563 | 0 0 0.0563)
+New Line.L25  Phases=3   Bus1=b32 Bus2=b33 emergamps=10000   Length=1
+~ rmatrix = (0.04502 | 0 0.04502 | 0 0 0.04502)
+~ xmatrix = (0.10394 | 0 0.10394 | 0 0 0.10394)
+New Line.L26  Phases=3   Bus1=b33 Bus2=b34 emergamps=10000   Length=1
+~ rmatrix = (0.01876 | 0 0.01876 | 0 0 0.01876)
+~ xmatrix = (0.04331 | 0 0.04331 | 0 0 0.04331)
+New Line.L27  Phases=3   Bus1=b34 Bus2=b35 emergamps=10000   Length=1
+~ rmatrix = (0.11823 | 0 0.11823 | 0 0 0.11823)
+~ xmatrix = (0.11805 | 0 0.11805 | 0 0 0.11805)
+New Line.L28  Phases=3   Bus1=b35 Bus2=b36 emergamps=10000   Length=1
+~ rmatrix = (0.02365 | 0 0.02365 | 0 0 0.02365)
+~ xmatrix = (0.02361 | 0 0.02361 | 0 0 0.02361)
+New Line.L29  Phases=3   Bus1=b36 Bus2=b37 emergamps=10000   Length=1
+~ rmatrix = (0.18954 | 0 0.18954 | 0 0 0.18954)
+~ xmatrix = (0.0997 | 0 0.0997 | 0 0 0.0997)
+New Line.L30  Phases=3   Bus1=b37 Bus2=b38 emergamps=10000   Length=1
+~ rmatrix = (0.39803 | 0 0.39803 | 0 0 0.39803)
+~ xmatrix = (0.20937 | 0 0.20937 | 0 0 0.20937)
+New Line.L31  Phases=3   Bus1=b36 Bus2=b39 emergamps=10000   Length=1
+~ rmatrix = (0.05675 | 0 0.05675 | 0 0 0.05675)
+~ xmatrix = (0.05666 | 0 0.05666 | 0 0 0.05666)
+New Line.L32  Phases=3   Bus1=b39 Bus2=b40 emergamps=10000   Length=1
+~ rmatrix = (0.09477 | 0 0.09477 | 0 0 0.09477)
+~ xmatrix = (0.04985 | 0 0.04985 | 0 0 0.04985)
+New Line.L33  Phases=3   Bus1=b40 Bus2=b41 emergamps=10000   Length=1
+~ rmatrix = (0.41699 | 0 0.41699 | 0 0 0.41699)
+~ xmatrix = (0.21934 | 0 0.21934 | 0 0 0.21934)
+New Line.L34  Phases=3   Bus1=b41 Bus2=b42 emergamps=10000   Length=1
+~ rmatrix = (0.11372 | 0 0.11372 | 0 0 0.11372)
+~ xmatrix = (0.05982 | 0 0.05982 | 0 0 0.05982)
+New Line.L35  Phases=3   Bus1=b39 Bus2=b43 emergamps=10000   Length=1
+~ rmatrix = (0.07566 | 0 0.07566 | 0 0 0.07566)
+~ xmatrix = (0.07555 | 0 0.07555 | 0 0 0.07555)
+New Line.L36  Phases=3   Bus1=b43 Bus2=b44 emergamps=10000   Length=1
+~ rmatrix = (0.3696 | 0 0.3696 | 0 0 0.3696)
+~ xmatrix = (0.19442 | 0 0.19442 | 0 0 0.19442)
+New Line.L37  Phases=3   Bus1=b44 Bus2=b45 emergamps=10000   Length=1
+~ rmatrix = (0.26536 | 0 0.26536 | 0 0 0.26536)
+~ xmatrix = (0.13958 | 0 0.13958 | 0 0 0.13958)
+New Line.L38  Phases=3   Bus1=b43 Bus2=b46 emergamps=10000   Length=1
+~ rmatrix = (0.05675 | 0 0.05675 | 0 0 0.05675)
+~ xmatrix = (0.05666 | 0 0.05666 | 0 0 0.05666)
+New Line.L39  Phases=3   Bus1=b0 Bus2=b48 emergamps=10000   Length=1
+~ rmatrix = (0.33205 | 0 0.33205 | 0 0 0.33205)
+~ xmatrix = (0.76653 | 0 0.76653 | 0 0 0.76653)
+New Line.L40  Phases=3   Bus1=b48 Bus2=b49 emergamps=10000   Length=1
+~ rmatrix = (0.11819 | 0 0.11819 | 0 0 0.11819)
+~ xmatrix = (0.27283 | 0 0.27283 | 0 0 0.27283)
+New Line.L41  Phases=3   Bus1=b49 Bus2=b50 emergamps=10000   Length=1
+~ rmatrix = (2.96288 | 0 2.96288 | 0 0 2.96288)
+~ xmatrix = (1.01628 | 0 1.01628 | 0 0 1.01628)
+New Line.L42  Phases=3   Bus1=b49 Bus2=b51 emergamps=10000   Length=1
+~ rmatrix = (0.00188 | 0 0.00188 | 0 0 0.00188)
+~ xmatrix = (0.00433 | 0 0.00433 | 0 0 0.00433)
+New Line.L43  Phases=3   Bus1=b51 Bus2=b52 emergamps=10000   Length=1
+~ rmatrix = (0.06941 | 0 0.06941 | 0 0 0.06941)
+~ xmatrix = (0.16024 | 0 0.16024 | 0 0 0.16024)
+New Line.L44  Phases=3   Bus1=b52 Bus2=b53 emergamps=10000   Length=1
+~ rmatrix = (0.81502 | 0 0.81502 | 0 0 0.81502)
+~ xmatrix = (0.42872 | 0 0.42872 | 0 0 0.42872)
+New Line.L45  Phases=3   Bus1=b52 Bus2=b54 emergamps=10000   Length=1
+~ rmatrix = (0.06378 | 0 0.06378 | 0 0 0.06378)
+~ xmatrix = (0.14724 | 0 0.14724 | 0 0 0.14724)
+New Line.L46  Phases=3   Bus1=b54 Bus2=b55 emergamps=10000   Length=1
+~ rmatrix = (0.13132 | 0 0.13132 | 0 0 0.13132)
+~ xmatrix = (0.30315 | 0 0.30315 | 0 0 0.30315)
+New Line.L47  Phases=3   Bus1=b55 Bus2=b56 emergamps=10000   Length=1
+~ rmatrix = (0.06191 | 0 0.06191 | 0 0 0.06191)
+~ xmatrix = (0.14291 | 0 0.14291 | 0 0 0.14291)
+New Line.L48  Phases=3   Bus1=b56 Bus2=b57 emergamps=10000   Length=1
+~ rmatrix = (0.11444 | 0 0.11444 | 0 0 0.11444)
+~ xmatrix = (0.26417 | 0 0.26417 | 0 0 0.26417)
+New Line.L49  Phases=3   Bus1=b57 Bus2=b58 emergamps=10000   Length=1
+~ rmatrix = (0.28374 | 0 0.28374 | 0 0 0.28374)
+~ xmatrix = (0.28331 | 0 0.28331 | 0 0 0.28331)
+New Line.L50  Phases=3   Bus1=b58 Bus2=b59 emergamps=10000   Length=1
+~ rmatrix = (0.28374 | 0 0.28374 | 0 0 0.28374)
+~ xmatrix = (0.28331 | 0 0.28331 | 0 0 0.28331)
+New Line.L51  Phases=3   Bus1=b57 Bus2=b61 emergamps=10000   Length=1
+~ rmatrix = (0.04502 | 0 0.04502 | 0 0 0.04502)
+~ xmatrix = (0.10394 | 0 0.10394 | 0 0 0.10394)
+New Line.L52  Phases=3   Bus1=b61 Bus2=b62 emergamps=10000   Length=1
+~ rmatrix = (0.02626 | 0 0.02626 | 0 0 0.02626)
+~ xmatrix = (0.06063 | 0 0.06063 | 0 0 0.06063)
+New Line.L53  Phases=3   Bus1=b62 Bus2=b63 emergamps=10000   Length=1
+~ rmatrix = (0.06003 | 0 0.06003 | 0 0 0.06003)
+~ xmatrix = (0.13858 | 0 0.13858 | 0 0 0.13858)
+New Line.L54  Phases=3   Bus1=b63 Bus2=b64 emergamps=10000   Length=1
+~ rmatrix = (0.03002 | 0 0.03002 | 0 0 0.03002)
+~ xmatrix = (0.06929 | 0 0.06929 | 0 0 0.06929)
+New Line.L55  Phases=3   Bus1=b64 Bus2=b65 emergamps=10000   Length=1
+~ rmatrix = (0.02064 | 0 0.02064 | 0 0 0.02064)
+~ xmatrix = (0.04764 | 0 0.04764 | 0 0 0.04764)
+New Line.L56  Phases=3   Bus1=b62 Bus2=b67 emergamps=10000   Length=1
+~ rmatrix = (0.10881 | 0 0.10881 | 0 0 0.10881)
+~ xmatrix = (0.25118 | 0 0.25118 | 0 0 0.25118)
+New Line.L57  Phases=3   Bus1=b67 Bus2=b68 emergamps=10000   Length=1
+~ rmatrix = (0.25588 | 0 0.25588 | 0 0 0.25588)
+~ xmatrix = (0.1346 | 0 0.1346 | 0 0 0.1346)
+New Line.L58  Phases=3   Bus1=b68 Bus2=b69 emergamps=10000   Length=1
+~ rmatrix = (0.41699 | 0 0.41699 | 0 0 0.41699)
+~ xmatrix = (0.21934 | 0 0.21934 | 0 0 0.21934)
+New Line.L59  Phases=3   Bus1=b69 Bus2=b70 emergamps=10000   Length=1
+~ rmatrix = (0.50228 | 0 0.50228 | 0 0 0.50228)
+~ xmatrix = (0.26421 | 0 0.26421 | 0 0 0.26421)
+New Line.L60  Phases=3   Bus1=b70 Bus2=b71 emergamps=10000   Length=1
+~ rmatrix = (0.3317 | 0 0.3317 | 0 0 0.3317)
+~ xmatrix = (0.17448 | 0 0.17448 | 0 0 0.17448)
+New Line.L61  Phases=3   Bus1=b71 Bus2=b72 emergamps=10000   Length=1
+~ rmatrix = (0.20849 | 0 0.20849 | 0 0 0.20849)
+~ xmatrix = (0.10967 | 0 0.10967 | 0 0 0.10967)
+New Line.L62  Phases=3   Bus1=b56 Bus2=b73 emergamps=10000   Length=1
+~ rmatrix = (0.13882 | 0 0.13882 | 0 0 0.13882)
+~ xmatrix = (0.32047 | 0 0.32047 | 0 0 0.32047)
+New Line.L63  Phases=3   Bus1=b0 Bus2=b75 emergamps=10000   Length=1
+~ rmatrix = (0.0075 | 0 0.0075 | 0 0 0.0075)
+~ xmatrix = (0.01732 | 0 0.01732 | 0 0 0.01732)
+New Line.L64  Phases=3   Bus1=b75 Bus2=b76 emergamps=10000   Length=1
+~ rmatrix = (0.27014 | 0 0.27014 | 0 0 0.27014)
+~ xmatrix = (0.62362 | 0 0.62362 | 0 0 0.62362)
+New Line.L65  Phases=3   Bus1=b76 Bus2=b77 emergamps=10000   Length=1
+~ rmatrix = (0.3827 | 0 0.3827 | 0 0 0.3827)
+~ xmatrix = (0.88346 | 0 0.88346 | 0 0 0.88346)
+New Line.L66  Phases=3   Bus1=b77 Bus2=b78 emergamps=10000   Length=1
+~ rmatrix = (0.33018 | 0 0.33018 | 0 0 0.33018)
+~ xmatrix = (0.7622 | 0 0.7622 | 0 0 0.7622)
+New Line.L67  Phases=3   Bus1=b78 Bus2=b80 emergamps=10000   Length=1
+~ rmatrix = (0.3283 | 0 0.3283 | 0 0 0.3283)
+~ xmatrix = (0.75787 | 0 0.75787 | 0 0 0.75787)
+New Line.L68  Phases=3   Bus1=b80 Bus2=b81 emergamps=10000   Length=1
+~ rmatrix = (0.17072 | 0 0.17072 | 0 0 0.17072)
+~ xmatrix = (0.39409 | 0 0.39409 | 0 0 0.39409)
+New Line.L69  Phases=3   Bus1=b81 Bus2=b82 emergamps=10000   Length=1
+~ rmatrix = (0.55914 | 0 0.55914 | 0 0 0.55914)
+~ xmatrix = (0.29412 | 0 0.29412 | 0 0 0.29412)
+New Line.L70  Phases=3   Bus1=b81 Bus2=b83 emergamps=10000   Length=1
+~ rmatrix = (0.05816 | 0 0.05816 | 0 0 0.05816)
+~ xmatrix = (0.13425 | 0 0.13425 | 0 0 0.13425)
+New Line.L71  Phases=3   Bus1=b83 Bus2=b84 emergamps=10000   Length=1
+~ rmatrix = (0.7013 | 0 0.7013 | 0 0 0.7013)
+~ xmatrix = (0.3689 | 0 0.3689 | 0 0 0.3689)
+New Line.L72  Phases=3   Bus1=b84 Bus2=b85 emergamps=10000   Length=1
+~ rmatrix = (1.02352 | 0 1.02352 | 0 0 1.02352)
+~ xmatrix = (0.53839 | 0 0.53839 | 0 0 0.53839)
+New Line.L73  Phases=3   Bus1=b83 Bus2=b86 emergamps=10000   Length=1
+~ rmatrix = (0.06754 | 0 0.06754 | 0 0 0.06754)
+~ xmatrix = (0.15591 | 0 0.15591 | 0 0 0.15591)
+New Line.L74  Phases=3   Bus1=b86 Bus2=b87 emergamps=10000   Length=1
+~ rmatrix = (1.32352 | 0 1.32352 | 0 0 1.32352)
+~ xmatrix = (0.45397 | 0 0.45397 | 0 0 0.45397)
+New Line.L75  Phases=3   Bus1=b0 Bus2=b121 emergamps=10000   Length=1
+~ rmatrix = (0.01126 | 0 0.01126 | 0 0 0.01126)
+~ xmatrix = (0.02598 | 0 0.02598 | 0 0 0.02598)
+New Line.L76  Phases=3   Bus1=b121 Bus2=b122 emergamps=10000   Length=1
+~ rmatrix = (0.72976 | 0 0.72976 | 0 0 0.72976)
+~ xmatrix = (1.68464 | 0 1.68464 | 0 0 1.68464)
+New Line.L77  Phases=3   Bus1=b122 Bus2=b123 emergamps=10000   Length=1
+~ rmatrix = (0.22512 | 0 0.22512 | 0 0 0.22512)
+~ xmatrix = (0.51968 | 0 0.51968 | 0 0 0.51968)
+New Line.L78  Phases=3   Bus1=b123 Bus2=b124 emergamps=10000   Length=1
+~ rmatrix = (0.20824 | 0 0.20824 | 0 0 0.20824)
+~ xmatrix = (0.48071 | 0 0.48071 | 0 0 0.48071)
+New Line.L79  Phases=3   Bus1=b124 Bus2=b125 emergamps=10000   Length=1
+~ rmatrix = (0.0469 | 0 0.0469 | 0 0 0.0469)
+~ xmatrix = (0.10827 | 0 0.10827 | 0 0 0.10827)
+New Line.L80  Phases=3   Bus1=b125 Bus2=b127 emergamps=10000   Length=1
+~ rmatrix = (0.6195 | 0 0.6195 | 0 0 0.6195)
+~ xmatrix = (0.61857 | 0 0.61857 | 0 0 0.61857)
+New Line.L81  Phases=3   Bus1=b127 Bus2=b128 emergamps=10000   Length=1
+~ rmatrix = (0.34049 | 0 0.34049 | 0 0 0.34049)
+~ xmatrix = (0.33998 | 0 0.33998 | 0 0 0.33998)
+New Line.L82  Phases=3   Bus1=b128 Bus2=b129 emergamps=10000   Length=1
+~ rmatrix = (0.56862 | 0 0.56862 | 0 0 0.56862)
+~ xmatrix = (0.29911 | 0 0.29911 | 0 0 0.29911)
+New Line.L83  Phases=3   Bus1=b128 Bus2=b130 emergamps=10000   Length=1
+~ rmatrix = (0.10877 | 0 0.10877 | 0 0 0.10877)
+~ xmatrix = (0.1086 | 0 0.1086 | 0 0 0.1086)
+New Line.L84  Phases=3   Bus1=b130 Bus2=b131 emergamps=10000   Length=1
+~ rmatrix = (0.56862 | 0 0.56862 | 0 0 0.56862)
+~ xmatrix = (0.29911 | 0 0.29911 | 0 0 0.29911)
+New Line.L85  Phases=3   Bus1=b0 Bus2=b133 emergamps=10000   Length=1
+~ rmatrix = (0.01126 | 0 0.01126 | 0 0 0.01126)
+~ xmatrix = (0.02598 | 0 0.02598 | 0 0 0.02598)
+New Line.L86  Phases=3   Bus1=b133 Bus2=b134 emergamps=10000   Length=1
+~ rmatrix = (0.41835 | 0 0.41835 | 0 0 0.41835)
+~ xmatrix = (0.96575 | 0 0.96575 | 0 0 0.96575)
+New Line.L87  Phases=3   Bus1=b134 Bus2=b135 emergamps=10000   Length=1
+~ rmatrix = (0.10499 | 0 0.10499 | 0 0 0.10499)
+~ xmatrix = (0.13641 | 0 0.13641 | 0 0 0.13641)
+New Line.L88  Phases=3   Bus1=b134 Bus2=b136 emergamps=10000   Length=1
+~ rmatrix = (0.43898 | 0 0.43898 | 0 0 0.43898)
+~ xmatrix = (1.01338 | 0 1.01338 | 0 0 1.01338)
+New Line.L89  Phases=3   Bus1=b136 Bus2=b137 emergamps=10000   Length=1
+~ rmatrix = (0.0752 | 0 0.0752 | 0 0 0.0752)
+~ xmatrix = (0.02579 | 0 0.02579 | 0 0 0.02579)
+New Line.L90  Phases=3   Bus1=b137 Bus2=b138 emergamps=10000   Length=1
+~ rmatrix = (0.07692 | 0 0.07692 | 0 0 0.07692)
+~ xmatrix = (0.17756 | 0 0.17756 | 0 0 0.17756)
+New Line.L91  Phases=3   Bus1=b138 Bus2=b139 emergamps=10000   Length=1
+~ rmatrix = (0.33205 | 0 0.33205 | 0 0 0.33205)
+~ xmatrix = (0.76653 | 0 0.76653 | 0 0 0.76653)
+New Line.L92  Phases=3   Bus1=b139 Bus2=b141 emergamps=10000   Length=1
+~ rmatrix = (0.08442 | 0 0.08442 | 0 0 0.08442)
+~ xmatrix = (0.19488 | 0 0.19488 | 0 0 0.19488)
+New Line.L93  Phases=3   Bus1=b141 Bus2=b142 emergamps=10000   Length=1
+~ rmatrix = (0.1332 | 0 0.1332 | 0 0 0.1332)
+~ xmatrix = (0.30748 | 0 0.30748 | 0 0 0.30748)
+New Line.L94  Phases=3   Bus1=b142 Bus2=b143 emergamps=10000   Length=1
+~ rmatrix = (0.2932 | 0 0.2932 | 0 0 0.2932)
+~ xmatrix = (0.29276 | 0 0.29276 | 0 0 0.29276)
+New Line.L95  Phases=3   Bus1=b143 Bus2=b144 emergamps=10000   Length=1
+~ rmatrix = (0.21753 | 0 0.21753 | 0 0 0.21753)
+~ xmatrix = (0.21721 | 0 0.21721 | 0 0 0.21721)
+New Line.L96  Phases=3   Bus1=b144 Bus2=b145 emergamps=10000   Length=1
+~ rmatrix = (0.26482 | 0 0.26482 | 0 0 0.26482)
+~ xmatrix = (0.26443 | 0 0.26443 | 0 0 0.26443)
+New Line.L97  Phases=3   Bus1=b142 Bus2=b146 emergamps=10000   Length=1
+~ rmatrix = (0.10318 | 0 0.10318 | 0 0 0.10318)
+~ xmatrix = (0.23819 | 0 0.23819 | 0 0 0.23819)
+New Line.L98  Phases=3   Bus1=b146 Bus2=b147 emergamps=10000   Length=1
+~ rmatrix = (0.13507 | 0 0.13507 | 0 0 0.13507)
+~ xmatrix = (0.31181 | 0 0.31181 | 0 0 0.31181)
+New Line.L99  Phases=3   Bus1=b0 Bus2=b148 emergamps=10000   Length=1
+~ rmatrix = (0.00938 | 0 0.00938 | 0 0 0.00938)
+~ xmatrix = (0.02165 | 0 0.02165 | 0 0 0.02165)
+New Line.L100  Phases=3   Bus1=b148 Bus2=b149 emergamps=10000   Length=1
+~ rmatrix = (0.16884 | 0 0.16884 | 0 0 0.16884)
+~ xmatrix = (0.38976 | 0 0.38976 | 0 0 0.38976)
+New Line.L101  Phases=3   Bus1=b149 Bus2=b150 emergamps=10000   Length=1
+~ rmatrix = (0.11819 | 0 0.11819 | 0 0 0.11819)
+~ xmatrix = (0.27283 | 0 0.27283 | 0 0 0.27283)
+New Line.L102  Phases=3   Bus1=b150 Bus2=b152 emergamps=10000   Length=1
+~ rmatrix = (2.28608 | 0 2.28608 | 0 0 2.28608)
+~ xmatrix = (0.78414 | 0 0.78414 | 0 0 0.78414)
+New Line.L103  Phases=3   Bus1=b150 Bus2=b153 emergamps=10000   Length=1
+~ rmatrix = (0.45587 | 0 0.45587 | 0 0 0.45587)
+~ xmatrix = (1.05236 | 0 1.05236 | 0 0 1.05236)
+New Line.L104  Phases=3   Bus1=b153 Bus2=b154 emergamps=10000   Length=1
+~ rmatrix = (0.696 | 0 0.696 | 0 0 0.696)
+~ xmatrix = (1.60669 | 0 1.60669 | 0 0 1.60669)
+New Line.L105  Phases=3   Bus1=b154 Bus2=b155 emergamps=10000   Length=1
+~ rmatrix = (0.45774 | 0 0.45774 | 0 0 0.45774)
+~ xmatrix = (1.05669 | 0 1.05669 | 0 0 1.05669)
+New Line.L106  Phases=3   Bus1=b155 Bus2=b156 emergamps=10000   Length=1
+~ rmatrix = (0.20298 | 0 0.20298 | 0 0 0.20298)
+~ xmatrix = (0.26373 | 0 0.26373 | 0 0 0.26373)
+New Line.L107  Phases=3   Bus1=b156 Bus2=b157 emergamps=10000   Length=1
+~ rmatrix = (0.21348 | 0 0.21348 | 0 0 0.21348)
+~ xmatrix = (0.27737 | 0 0.27737 | 0 0 0.27737)
+New Line.L108  Phases=3   Bus1=b157 Bus2=b158 emergamps=10000   Length=1
+~ rmatrix = (0.54967 | 0 0.54967 | 0 0 0.54967)
+~ xmatrix = (0.28914 | 0 0.28914 | 0 0 0.28914)
+New Line.L109  Phases=3   Bus1=b158 Bus2=b159 emergamps=10000   Length=1
+~ rmatrix = (0.54019 | 0 0.54019 | 0 0 0.54019)
+~ xmatrix = (0.28415 | 0 0.28415 | 0 0 0.28415)
+New Line.L110  Phases=3   Bus1=b157 Bus2=b160 emergamps=10000   Length=1
+~ rmatrix = (0.0455 | 0 0.0455 | 0 0 0.0455)
+~ xmatrix = (0.05911 | 0 0.05911 | 0 0 0.05911)
+New Line.L111  Phases=3   Bus1=b160 Bus2=b162 emergamps=10000   Length=1
+~ rmatrix = (0.47385 | 0 0.47385 | 0 0 0.47385)
+~ xmatrix = (0.24926 | 0 0.24926 | 0 0 0.24926)
+New Line.L112  Phases=3   Bus1=b162 Bus2=b163 emergamps=10000   Length=1
+~ rmatrix = (0.86241 | 0 0.86241 | 0 0 0.86241)
+~ xmatrix = (0.45364 | 0 0.45364 | 0 0 0.45364)
+New Line.L113  Phases=3   Bus1=b163 Bus2=b164 emergamps=10000   Length=1
+~ rmatrix = (0.56862 | 0 0.56862 | 0 0 0.56862)
+~ xmatrix = (0.29911 | 0 0.29911 | 0 0 0.29911)
+New Line.L114  Phases=3   Bus1=b158 Bus2=b200 emergamps=10000   Length=1
+~ rmatrix = (0.77711 | 0 0.77711 | 0 0 0.77711)
+~ xmatrix = (0.40878 | 0 0.40878 | 0 0 0.40878)
+New Line.L115  Phases=3   Bus1=b200 Bus2=b201 emergamps=10000   Length=1
+~ rmatrix = (1.08038 | 0 1.08038 | 0 0 1.08038)
+~ xmatrix = (0.5683 | 0 0.5683 | 0 0 0.5683)
+New Line.L116  Phases=3   Bus1=b159 Bus2=b202 emergamps=10000   Length=1
+~ rmatrix = (1.09933 | 0 1.09933 | 0 0 1.09933)
+~ xmatrix = (0.57827 | 0 0.57827 | 0 0 0.57827)
+New Line.L117  Phases=3   Bus1=b202 Bus2=b203 emergamps=10000   Length=1
+~ rmatrix = (0.47385 | 0 0.47385 | 0 0 0.47385)
+~ xmatrix = (0.24926 | 0 0.24926 | 0 0 0.24926)
+New Line.L118  Phases=3   Bus1=b154 Bus2=b204 emergamps=10000   Length=1
+~ rmatrix = (0.32267 | 0 0.32267 | 0 0 0.32267)
+~ xmatrix = (0.74488 | 0 0.74488 | 0 0 0.74488)
+New Line.L119  Phases=3   Bus1=b204 Bus2=b205 emergamps=10000   Length=1
+~ rmatrix = (0.14633 | 0 0.14633 | 0 0 0.14633)
+~ xmatrix = (0.33779 | 0 0.33779 | 0 0 0.33779)
+New Line.L120  Phases=3   Bus1=b205 Bus2=b206 emergamps=10000   Length=1
+~ rmatrix = (0.12382 | 0 0.12382 | 0 0 0.12382)
+~ xmatrix = (0.28583 | 0 0.28583 | 0 0 0.28583)
+New Line.L121  Phases=3   Bus1=b0 Bus2=b207 emergamps=10000   Length=1
+~ rmatrix = (0.01126 | 0 0.01126 | 0 0 0.01126)
+~ xmatrix = (0.02598 | 0 0.02598 | 0 0 0.02598)
+New Line.L122  Phases=3   Bus1=b207 Bus2=b208 emergamps=10000   Length=1
+~ rmatrix = (0.6491 | 0 0.6491 | 0 0 0.6491)
+~ xmatrix = (1.49842 | 0 1.49842 | 0 0 1.49842)
+New Line.L123  Phases=3   Bus1=b208 Bus2=b209 emergamps=10000   Length=1
+~ rmatrix = (0.04502 | 0 0.04502 | 0 0 0.04502)
+~ xmatrix = (0.10394 | 0 0.10394 | 0 0 0.10394)
+New Line.L124  Phases=3   Bus1=b209 Bus2=b210 emergamps=10000   Length=1
+~ rmatrix = (0.5264 | 0 0.5264 | 0 0 0.5264)
+~ xmatrix = (0.18056 | 0 0.18056 | 0 0 0.18056)
+New Line.L125  Phases=3   Bus1=b209 Bus2=b211 emergamps=10000   Length=1
+~ rmatrix = (0.02064 | 0 0.02064 | 0 0 0.02064)
+~ xmatrix = (0.04764 | 0 0.04764 | 0 0 0.04764)
+New Line.L126  Phases=3   Bus1=b211 Bus2=b212 emergamps=10000   Length=1
+~ rmatrix = (0.53071 | 0 0.53071 | 0 0 0.53071)
+~ xmatrix = (0.27917 | 0 0.27917 | 0 0 0.27917)
+New Line.L127  Phases=3   Bus1=b211 Bus2=b214 emergamps=10000   Length=1
+~ rmatrix = (0.09755 | 0 0.09755 | 0 0 0.09755)
+~ xmatrix = (0.2252 | 0 0.2252 | 0 0 0.2252)
+New Line.L128  Phases=3   Bus1=b214 Bus2=b215 emergamps=10000   Length=1
+~ rmatrix = (0.11819 | 0 0.11819 | 0 0 0.11819)
+~ xmatrix = (0.27283 | 0 0.27283 | 0 0 0.27283)
+New Line.L129  Phases=3   Bus1=b214 Bus2=b217 emergamps=10000   Length=1
+~ rmatrix = (0.13882 | 0 0.13882 | 0 0 0.13882)
+~ xmatrix = (0.32047 | 0 0.32047 | 0 0 0.32047)
+New Line.L130  Phases=3   Bus1=b217 Bus2=b218 emergamps=10000   Length=1
+~ rmatrix = (0.04315 | 0 0.04315 | 0 0 0.04315)
+~ xmatrix = (0.09961 | 0 0.09961 | 0 0 0.09961)
+New Line.L131  Phases=3   Bus1=b218 Bus2=b219 emergamps=10000   Length=1
+~ rmatrix = (0.09192 | 0 0.09192 | 0 0 0.09192)
+~ xmatrix = (0.2122 | 0 0.2122 | 0 0 0.2122)
+New Line.L132  Phases=3   Bus1=b219 Bus2=b220 emergamps=10000   Length=1
+~ rmatrix = (0.16134 | 0 0.16134 | 0 0 0.16134)
+~ xmatrix = (0.37244 | 0 0.37244 | 0 0 0.37244)
+New Line.L133  Phases=3   Bus1=b220 Bus2=b221 emergamps=10000   Length=1
+~ rmatrix = (0.37832 | 0 0.37832 | 0 0 0.37832)
+~ xmatrix = (0.37775 | 0 0.37775 | 0 0 0.37775)
+New Line.L134  Phases=3   Bus1=b221 Bus2=b222 emergamps=10000   Length=1
+~ rmatrix = (0.39724 | 0 0.39724 | 0 0 0.39724)
+~ xmatrix = (0.39664 | 0 0.39664 | 0 0 0.39664)
+New Line.L135  Phases=3   Bus1=b222 Bus2=b223 emergamps=10000   Length=1
+~ rmatrix = (0.2932 | 0 0.2932 | 0 0 0.2932)
+~ xmatrix = (0.29276 | 0 0.29276 | 0 0 0.29276)
+New Line.L136  Phases=3   Bus1=b7 Bus2=b86 emergamps=10000   Length=1
+~ rmatrix = (0.13132 | 0 0.13132 | 0 0 0.13132)
+~ xmatrix = (0.30315 | 0 0.30315 | 0 0 0.30315)
+New Line.L137  Phases=3   Bus1=b10 Bus2=b32 emergamps=10000   Length=1
+~ rmatrix = (0.26536 | 0 0.26536 | 0 0 0.26536)
+~ xmatrix = (0.13958 | 0 0.13958 | 0 0 0.13958)
+New Line.L138  Phases=3   Bus1=b20 Bus2=b130 emergamps=10000   Length=1
+~ rmatrix = (0.14187 | 0 0.14187 | 0 0 0.14187)
+~ xmatrix = (0.14166 | 0 0.14166 | 0 0 0.14166)
+New Line.L139  Phases=3   Bus1=b46 Bus2=b223 emergamps=10000   Length=1
+~ rmatrix = (0.08512 | 0 0.08512 | 0 0 0.08512)
+~ xmatrix = (0.08499 | 0 0.08499 | 0 0 0.08499)
+New Line.L140  Phases=3   Bus1=b33 Bus2=b61 emergamps=10000   Length=1
+~ rmatrix = (0.04502 | 0 0.04502 | 0 0 0.04502)
+~ xmatrix = (0.10394 | 0 0.10394 | 0 0 0.10394)
+New Line.L141  Phases=3   Bus1=b59 Bus2=b145 emergamps=10000   Length=1
+~ rmatrix = (0.14187 | 0 0.14187 | 0 0 0.14187)
+~ xmatrix = (0.14166 | 0 0.14166 | 0 0 0.14166)
+New Line.L142  Phases=3   Bus1=b65 Bus2=b147 emergamps=10000   Length=1
+~ rmatrix = (0.14187 | 0 0.14187 | 0 0 0.14187)
+~ xmatrix = (0.14166 | 0 0.14166 | 0 0 0.14166)
+New Line.L143  Phases=3   Bus1=b73 Bus2=b206 emergamps=10000   Length=1
+~ rmatrix = (0.0394 | 0 0.0394 | 0 0 0.0394)
+~ xmatrix = (0.09094 | 0 0.09094 | 0 0 0.09094)
+New Line.L144  Phases=3   Bus1=b78 Bus2=b125 emergamps=10000   Length=1
+~ rmatrix = (0.12944 | 0 0.12944 | 0 0 0.12944)
+~ xmatrix = (0.29882 | 0 0.29882 | 0 0 0.29882)
+New Line.L145  Phases=3   Bus1=b125 Bus2=b219 emergamps=10000   Length=1
+~ rmatrix = (0.01688 | 0 0.01688 | 0 0 0.01688)
+~ xmatrix = (0.03898 | 0 0.03898 | 0 0 0.03898)
+New Line.L146  Phases=3   Bus1=b131 Bus2=b223 emergamps=10000   Length=1
+~ rmatrix = (0.3317 | 0 0.3317 | 0 0 0.3317)
+~ xmatrix = (0.17448 | 0 0.17448 | 0 0 0.17448)
+New Line.L147  Phases=3   Bus1=b139 Bus2=b154 emergamps=10000   Length=1
+~ rmatrix = (0.14187 | 0 0.14187 | 0 0 0.14187)
+~ xmatrix = (0.14166 | 0 0.14166 | 0 0 0.14166)
+New Line.L148  Phases=3   Bus1=b138 Bus2=b217 emergamps=10000   Length=1
+~ rmatrix = (0.07692 | 0 0.07692 | 0 0 0.07692)
+~ xmatrix = (0.17756 | 0 0.17756 | 0 0 0.17756)
+New Line.L149  Phases=3   Bus1=b138 Bus2=b153 emergamps=10000   Length=1
+~ rmatrix = (0.07692 | 0 0.07692 | 0 0 0.07692)
+~ xmatrix = (0.17756 | 0 0.17756 | 0 0 0.17756)
+New Line.L150  Phases=3   Bus1=b141 Bus2=b154 emergamps=10000   Length=1
+~ rmatrix = (0.07692 | 0 0.07692 | 0 0 0.07692)
+~ xmatrix = (0.17756 | 0 0.17756 | 0 0 0.17756)
+New Line.L151  Phases=3   Bus1=b141 Bus2=b220 emergamps=10000   Length=1
+~ rmatrix = (0.07692 | 0 0.07692 | 0 0 0.07692)
+~ xmatrix = (0.17756 | 0 0.17756 | 0 0 0.17756)
+New Line.L152  Phases=3   Bus1=b145 Bus2=b206 emergamps=10000   Length=1
+~ rmatrix = (0.26482 | 0 0.26482 | 0 0 0.26482)
+~ xmatrix = (0.26443 | 0 0.26443 | 0 0 0.26443)
+New Line.L153  Phases=3   Bus1=b160 Bus2=b56 emergamps=10000   Length=1
+~ rmatrix = (0.49696 | 0 0.49696 | 0 0 0.49696)
+~ xmatrix = (0.64567 | 0 0.64567 | 0 0 0.64567)
+New Line.L154  Phases=3   Bus1=b212 Bus2=b122 emergamps=10000   Length=1
+~ rmatrix = (0.17059 | 0 0.17059 | 0 0 0.17059)
+~ xmatrix = (0.08973 | 0 0.08973 | 0 0 0.08973)
+New Line.L155  Phases=3   Bus1=b215 Bus2=b123 emergamps=10000   Length=1
+~ rmatrix = (0.05253 | 0 0.05253 | 0 0 0.05253)
+~ xmatrix = (0.12126 | 0 0.12126 | 0 0 0.12126)
+New Line.L156  Phases=3   Bus1=b223 Bus2=b147 emergamps=10000   Length=1
+~ rmatrix = (0.2932 | 0 0.2932 | 0 0 0.2932)
+~ xmatrix = (0.29276 | 0 0.29276 | 0 0 0.29276)
+
+New Load.LoadB2 Bus1=b2   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=47.78  kVAR=19.009
+New Load.LoadB3 Bus1=b3   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=42.551  kVAR=16.929
+New Load.LoadB4 Bus1=b4   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=87.022  kVAR=34.622
+New Load.LoadB5 Bus1=b5   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=311.31  kVAR=123.855
+New Load.LoadB6 Bus1=b6   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=148.869  kVAR=59.228
+New Load.LoadB7 Bus1=b7   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=238.672  kVAR=94.956
+New Load.LoadB9 Bus1=b9   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=62.299  kVAR=24.786
+New Load.LoadB10 Bus1=b10   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=124.598  kVAR=49.571
+New Load.LoadB12 Bus1=b12   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=140.175  kVAR=55.768
+New Load.LoadB13 Bus1=b13   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=116.813  kVAR=46.474
+New Load.LoadB15 Bus1=b15   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=249.203  kVAR=99.145
+New Load.LoadB17 Bus1=b17   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=291.447  kVAR=115.952
+New Load.LoadB18 Bus1=b18   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=303.72  kVAR=120.835
+New Load.LoadB20 Bus1=b20   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=215.396  kVAR=85.695
+New Load.LoadB21 Bus1=b21   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=198.586  kVAR=79.007
+New Load.LoadB27 Bus1=b27   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=30.127  kVAR=14.729
+New Load.LoadB28 Bus1=b28   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=230.972  kVAR=112.92
+New Load.LoadB29 Bus1=b29   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=60.256  kVAR=29.458
+New Load.LoadB30 Bus1=b30   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=230.972  kVAR=112.92
+New Load.LoadB32 Bus1=b32   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=120.507  kVAR=58.915
+New Load.LoadB34 Bus1=b34   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=56.981  kVAR=27.857
+New Load.LoadB35 Bus1=b35   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=364.665  kVAR=178.281
+New Load.LoadB37 Bus1=b37   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=124.647  kVAR=60.939
+New Load.LoadB38 Bus1=b38   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=56.981  kVAR=27.857
+New Load.LoadB40 Bus1=b40   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=85.473  kVAR=41.787
+New Load.LoadB42 Bus1=b42   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=396.735  kVAR=193.96
+New Load.LoadB44 Bus1=b44   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=181.152  kVAR=88.563
+New Load.LoadB45 Bus1=b45   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=242.172  kVAR=118.395
+New Load.LoadB46 Bus1=b46   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=75.316  kVAR=36.821
+New Load.LoadB49 Bus1=b49   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=1.254  kVAR=0.531
+New Load.LoadB50 Bus1=b50   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=6.274  kVAR=2.66
+New Load.LoadB52 Bus1=b52   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=117.88  kVAR=49.971
+New Load.LoadB53 Bus1=b53   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=62.668  kVAR=26.566
+New Load.LoadB54 Bus1=b54   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=172.285  kVAR=73.034
+New Load.LoadB55 Bus1=b55   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=458.556  kVAR=194.388
+New Load.LoadB56 Bus1=b56   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=262.962  kVAR=111.473
+New Load.LoadB57 Bus1=b57   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=235.761  kVAR=99.942
+New Load.LoadB59 Bus1=b59   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=109.215  kVAR=46.298
+New Load.LoadB62 Bus1=b62   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=72.809  kVAR=30.865
+New Load.LoadB63 Bus1=b63   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=258.473  kVAR=109.57
+New Load.LoadB64 Bus1=b64   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=69.169  kVAR=29.322
+New Load.LoadB65 Bus1=b65   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=21.843  kVAR=9.26
+New Load.LoadB68 Bus1=b68   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=20.527  kVAR=8.702
+New Load.LoadB69 Bus1=b69   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=150.548  kVAR=63.819
+New Load.LoadB70 Bus1=b70   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=220.687  kVAR=93.552
+New Load.LoadB71 Bus1=b71   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=92.384  kVAR=39.163
+New Load.LoadB73 Bus1=b73   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=226.693  kVAR=96.098
+New Load.LoadB76 Bus1=b76   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=294.016  kVAR=116.974
+New Load.LoadB77 Bus1=b77   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=83.015  kVAR=33.028
+New Load.LoadB78 Bus1=b78   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=83.015  kVAR=33.028
+New Load.LoadB80 Bus1=b80   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=103.77  kVAR=41.285
+New Load.LoadB81 Bus1=b81   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=176.408  kVAR=70.184
+New Load.LoadB82 Bus1=b82   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=83.015  kVAR=33.028
+New Load.LoadB83 Bus1=b83   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=217.917  kVAR=86.698
+New Load.LoadB84 Bus1=b84   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=23.294  kVAR=9.267
+New Load.LoadB85 Bus1=b85   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=5.075  kVAR=2.019
+New Load.LoadB86 Bus1=b86   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=72.638  kVAR=28.899
+New Load.LoadB87 Bus1=b87   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=405.99  kVAR=161.523
+New Load.LoadB122 Bus1=b122   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=100.182  kVAR=42.468
+New Load.LoadB123 Bus1=b123   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=142.523  kVAR=60.417
+New Load.LoadB124 Bus1=b124   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=96.042  kVAR=40.713
+New Load.LoadB125 Bus1=b125   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=300.454  kVAR=127.366
+New Load.LoadB127 Bus1=b127   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=141.238  kVAR=59.873
+New Load.LoadB128 Bus1=b128   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=279.847  kVAR=118.631
+New Load.LoadB129 Bus1=b129   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=87.312  kVAR=37.013
+New Load.LoadB130 Bus1=b130   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=243.849  kVAR=103.371
+New Load.LoadB131 Bus1=b131   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=247.75  kVAR=105.025
+New Load.LoadB134 Bus1=b134   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=89.878  kVAR=38.101
+New Load.LoadB135 Bus1=b135   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=1137.28  kVAR=482.108
+New Load.LoadB136 Bus1=b136   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=458.339  kVAR=194.296
+New Load.LoadB137 Bus1=b137   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=385.197  kVAR=163.29
+New Load.LoadB139 Bus1=b139   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=79.608  kVAR=33.747
+New Load.LoadB141 Bus1=b141   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=87.312  kVAR=37.013
+New Load.LoadB143 Bus1=b143   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=74.001  kVAR=31.37
+New Load.LoadB144 Bus1=b144   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=232.05  kVAR=98.369
+New Load.LoadB145 Bus1=b145   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=141.819  kVAR=60.119
+New Load.LoadB147 Bus1=b147   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=76.449  kVAR=32.408
+New Load.LoadB149 Bus1=b149   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=51.322  kVAR=21.756
+New Load.LoadB150 Bus1=b150   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=59.874  kVAR=25.381
+New Load.LoadB152 Bus1=b152   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=9.065  kVAR=3.843
+New Load.LoadB153 Bus1=b153   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=2.092  kVAR=0.887
+New Load.LoadB154 Bus1=b154   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=16.735  kVAR=7.094
+New Load.LoadB155 Bus1=b155   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=1506.522  kVAR=638.634
+New Load.LoadB156 Bus1=b156   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=313.023  kVAR=132.694
+New Load.LoadB157 Bus1=b157   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=79.831  kVAR=33.842
+New Load.LoadB158 Bus1=b158   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=51.322  kVAR=21.756
+New Load.LoadB160 Bus1=b160   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=202.435  kVAR=85.815
+New Load.LoadB162 Bus1=b162   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=60.823  kVAR=25.784
+New Load.LoadB163 Bus1=b163   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=45.618  kVAR=19.338
+New Load.LoadB200 Bus1=b200   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=157.07  kVAR=66.584
+New Load.LoadB202 Bus1=b202   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=250.148  kVAR=106.041
+New Load.LoadB204 Bus1=b204   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=69.809  kVAR=29.593
+New Load.LoadB205 Bus1=b205   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=32.072  kVAR=13.596
+New Load.LoadB206 Bus1=b206   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=61.084  kVAR=25.894
+New Load.LoadB208 Bus1=b208   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=94.622  kVAR=46.26
+New Load.LoadB209 Bus1=b209   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=49.858  kVAR=24.375
+New Load.LoadB210 Bus1=b210   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=123.164  kVAR=60.214
+New Load.LoadB211 Bus1=b211   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=78.35  kVAR=38.304
+New Load.LoadB212 Bus1=b212   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=145.475  kVAR=71.121
+New Load.LoadB214 Bus1=b214   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=21.369  kVAR=10.447
+New Load.LoadB215 Bus1=b215   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=74.789  kVAR=36.564
+New Load.LoadB217 Bus1=b217   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=227.926  kVAR=111.431
+New Load.LoadB218 Bus1=b218   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=35.614  kVAR=17.411
+New Load.LoadB219 Bus1=b219   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=249.295  kVAR=121.877
+New Load.LoadB220 Bus1=b220   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=316.722  kVAR=154.842
+New Load.LoadB221 Bus1=b221   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=333.817  kVAR=163.199
+New Load.LoadB222 Bus1=b222   Phases=3  Vmaxpu=1.1  Vminpu=0.9  kV=13.8  kW=249.295  kVAR=121.877
+
+
+New swtcontrol.S1 SwitchedObj=Line.L1 action=close
+New swtcontrol.S2 SwitchedObj=Line.L2 action=close
+New swtcontrol.S3 SwitchedObj=Line.L3 action=close
+New swtcontrol.S4 SwitchedObj=Line.L4 action=close
+New swtcontrol.S5 SwitchedObj=Line.L5 action=close
+New swtcontrol.S6 SwitchedObj=Line.L6 action=close
+New swtcontrol.S7 SwitchedObj=Line.L7 action=close
+New swtcontrol.S8 SwitchedObj=Line.L8 action=close
+New swtcontrol.S9 SwitchedObj=Line.L9 action=close
+New swtcontrol.S10 SwitchedObj=Line.L10 action=close
+New swtcontrol.S11 SwitchedObj=Line.L11 action=close
+New swtcontrol.S12 SwitchedObj=Line.L12 action=close
+New swtcontrol.S13 SwitchedObj=Line.L13 action=close
+New swtcontrol.S14 SwitchedObj=Line.L14 action=close
+New swtcontrol.S15 SwitchedObj=Line.L15 action=close
+New swtcontrol.S16 SwitchedObj=Line.L16 action=close
+New swtcontrol.S17 SwitchedObj=Line.L17 action=close
+New swtcontrol.S18 SwitchedObj=Line.L18 action=close
+New swtcontrol.S19 SwitchedObj=Line.L19 action=close
+New swtcontrol.S20 SwitchedObj=Line.L20 action=close
+New swtcontrol.S21 SwitchedObj=Line.L21 action=close
+New swtcontrol.S22 SwitchedObj=Line.L22 action=close
+New swtcontrol.S23 SwitchedObj=Line.L23 action=close
+New swtcontrol.S24 SwitchedObj=Line.L24 action=close
+New swtcontrol.S25 SwitchedObj=Line.L25 action=close
+New swtcontrol.S26 SwitchedObj=Line.L26 action=close
+New swtcontrol.S27 SwitchedObj=Line.L27 action=close
+New swtcontrol.S28 SwitchedObj=Line.L28 action=close
+New swtcontrol.S29 SwitchedObj=Line.L29 action=close
+New swtcontrol.S30 SwitchedObj=Line.L30 action=close
+New swtcontrol.S31 SwitchedObj=Line.L31 action=close
+New swtcontrol.S32 SwitchedObj=Line.L32 action=close
+New swtcontrol.S33 SwitchedObj=Line.L33 action=close
+New swtcontrol.S34 SwitchedObj=Line.L34 action=close
+New swtcontrol.S35 SwitchedObj=Line.L35 action=close
+New swtcontrol.S36 SwitchedObj=Line.L36 action=close
+New swtcontrol.S37 SwitchedObj=Line.L37 action=close
+New swtcontrol.S38 SwitchedObj=Line.L38 action=close
+New swtcontrol.S39 SwitchedObj=Line.L39 action=close
+New swtcontrol.S40 SwitchedObj=Line.L40 action=close
+New swtcontrol.S41 SwitchedObj=Line.L41 action=close
+New swtcontrol.S42 SwitchedObj=Line.L42 action=close
+New swtcontrol.S43 SwitchedObj=Line.L43 action=close
+New swtcontrol.S44 SwitchedObj=Line.L44 action=close
+New swtcontrol.S45 SwitchedObj=Line.L45 action=close
+New swtcontrol.S46 SwitchedObj=Line.L46 action=close
+New swtcontrol.S47 SwitchedObj=Line.L47 action=close
+New swtcontrol.S48 SwitchedObj=Line.L48 action=close
+New swtcontrol.S49 SwitchedObj=Line.L49 action=close
+New swtcontrol.S50 SwitchedObj=Line.L50 action=close
+New swtcontrol.S51 SwitchedObj=Line.L51 action=close
+New swtcontrol.S52 SwitchedObj=Line.L52 action=close
+New swtcontrol.S53 SwitchedObj=Line.L53 action=close
+New swtcontrol.S54 SwitchedObj=Line.L54 action=close
+New swtcontrol.S55 SwitchedObj=Line.L55 action=close
+New swtcontrol.S56 SwitchedObj=Line.L56 action=close
+New swtcontrol.S57 SwitchedObj=Line.L57 action=close
+New swtcontrol.S58 SwitchedObj=Line.L58 action=close
+New swtcontrol.S59 SwitchedObj=Line.L59 action=close
+New swtcontrol.S60 SwitchedObj=Line.L60 action=close
+New swtcontrol.S61 SwitchedObj=Line.L61 action=close
+New swtcontrol.S62 SwitchedObj=Line.L62 action=close
+New swtcontrol.S63 SwitchedObj=Line.L63 action=close
+New swtcontrol.S64 SwitchedObj=Line.L64 action=close
+New swtcontrol.S65 SwitchedObj=Line.L65 action=close
+New swtcontrol.S66 SwitchedObj=Line.L66 action=close
+New swtcontrol.S67 SwitchedObj=Line.L67 action=close
+New swtcontrol.S68 SwitchedObj=Line.L68 action=close
+New swtcontrol.S69 SwitchedObj=Line.L69 action=close
+New swtcontrol.S70 SwitchedObj=Line.L70 action=close
+New swtcontrol.S71 SwitchedObj=Line.L71 action=close
+New swtcontrol.S72 SwitchedObj=Line.L72 action=close
+New swtcontrol.S73 SwitchedObj=Line.L73 action=close
+New swtcontrol.S74 SwitchedObj=Line.L74 action=close
+New swtcontrol.S75 SwitchedObj=Line.L75 action=close
+New swtcontrol.S76 SwitchedObj=Line.L76 action=close
+New swtcontrol.S77 SwitchedObj=Line.L77 action=close
+New swtcontrol.S78 SwitchedObj=Line.L78 action=close
+New swtcontrol.S79 SwitchedObj=Line.L79 action=close
+New swtcontrol.S80 SwitchedObj=Line.L80 action=close
+New swtcontrol.S81 SwitchedObj=Line.L81 action=close
+New swtcontrol.S82 SwitchedObj=Line.L82 action=close
+New swtcontrol.S83 SwitchedObj=Line.L83 action=close
+New swtcontrol.S84 SwitchedObj=Line.L84 action=close
+New swtcontrol.S85 SwitchedObj=Line.L85 action=close
+New swtcontrol.S86 SwitchedObj=Line.L86 action=close
+New swtcontrol.S87 SwitchedObj=Line.L87 action=close
+New swtcontrol.S88 SwitchedObj=Line.L88 action=close
+New swtcontrol.S89 SwitchedObj=Line.L89 action=close
+New swtcontrol.S90 SwitchedObj=Line.L90 action=close
+New swtcontrol.S91 SwitchedObj=Line.L91 action=close
+New swtcontrol.S92 SwitchedObj=Line.L92 action=close
+New swtcontrol.S93 SwitchedObj=Line.L93 action=close
+New swtcontrol.S94 SwitchedObj=Line.L94 action=close
+New swtcontrol.S95 SwitchedObj=Line.L95 action=close
+New swtcontrol.S96 SwitchedObj=Line.L96 action=close
+New swtcontrol.S97 SwitchedObj=Line.L97 action=close
+New swtcontrol.S98 SwitchedObj=Line.L98 action=close
+New swtcontrol.S99 SwitchedObj=Line.L99 action=close
+New swtcontrol.S100 SwitchedObj=Line.L100 action=close
+New swtcontrol.S101 SwitchedObj=Line.L101 action=close
+New swtcontrol.S102 SwitchedObj=Line.L102 action=close
+New swtcontrol.S103 SwitchedObj=Line.L103 action=close
+New swtcontrol.S104 SwitchedObj=Line.L104 action=close
+New swtcontrol.S105 SwitchedObj=Line.L105 action=close
+New swtcontrol.S106 SwitchedObj=Line.L106 action=close
+New swtcontrol.S107 SwitchedObj=Line.L107 action=close
+New swtcontrol.S108 SwitchedObj=Line.L108 action=close
+New swtcontrol.S109 SwitchedObj=Line.L109 action=close
+New swtcontrol.S110 SwitchedObj=Line.L110 action=close
+New swtcontrol.S111 SwitchedObj=Line.L111 action=close
+New swtcontrol.S112 SwitchedObj=Line.L112 action=close
+New swtcontrol.S113 SwitchedObj=Line.L113 action=close
+New swtcontrol.S114 SwitchedObj=Line.L114 action=close
+New swtcontrol.S115 SwitchedObj=Line.L115 action=close
+New swtcontrol.S116 SwitchedObj=Line.L116 action=close
+New swtcontrol.S117 SwitchedObj=Line.L117 action=close
+New swtcontrol.S118 SwitchedObj=Line.L118 action=close
+New swtcontrol.S119 SwitchedObj=Line.L119 action=close
+New swtcontrol.S120 SwitchedObj=Line.L120 action=close
+New swtcontrol.S121 SwitchedObj=Line.L121 action=close
+New swtcontrol.S122 SwitchedObj=Line.L122 action=close
+New swtcontrol.S123 SwitchedObj=Line.L123 action=close
+New swtcontrol.S124 SwitchedObj=Line.L124 action=close
+New swtcontrol.S125 SwitchedObj=Line.L125 action=close
+New swtcontrol.S126 SwitchedObj=Line.L126 action=close
+New swtcontrol.S127 SwitchedObj=Line.L127 action=close
+New swtcontrol.S128 SwitchedObj=Line.L128 action=close
+New swtcontrol.S129 SwitchedObj=Line.L129 action=close
+New swtcontrol.S130 SwitchedObj=Line.L130 action=close
+New swtcontrol.S131 SwitchedObj=Line.L131 action=close
+New swtcontrol.S132 SwitchedObj=Line.L132 action=close
+New swtcontrol.S133 SwitchedObj=Line.L133 action=close
+New swtcontrol.S134 SwitchedObj=Line.L134 action=close
+New swtcontrol.S135 SwitchedObj=Line.L135 action=close
+
+New swtcontrol.S136 SwitchedObj=Line.L136 action=close
+New swtcontrol.S137 SwitchedObj=Line.L137 action=close
+New swtcontrol.S138 SwitchedObj=Line.L138 action=close
+New swtcontrol.S139 SwitchedObj=Line.L139 action=close
+New swtcontrol.S140 SwitchedObj=Line.L140 action=close
+New swtcontrol.S141 SwitchedObj=Line.L141 action=close
+New swtcontrol.S142 SwitchedObj=Line.L142 action=close
+New swtcontrol.S143 SwitchedObj=Line.L143 action=close
+New swtcontrol.S144 SwitchedObj=Line.L144 action=close
+New swtcontrol.S145 SwitchedObj=Line.L145 action=close
+New swtcontrol.S146 SwitchedObj=Line.L146 action=close
+New swtcontrol.S147 SwitchedObj=Line.L147 action=close
+New swtcontrol.S148 SwitchedObj=Line.L148 action=close
+New swtcontrol.S149 SwitchedObj=Line.L149 action=close
+New swtcontrol.S150 SwitchedObj=Line.L150 action=close
+New swtcontrol.S151 SwitchedObj=Line.L151 action=close
+New swtcontrol.S152 SwitchedObj=Line.L152 action=close
+New swtcontrol.S153 SwitchedObj=Line.L153 action=close
+New swtcontrol.S154 SwitchedObj=Line.L154 action=close
+New swtcontrol.S155 SwitchedObj=Line.L155 action=close
+New swtcontrol.S156 SwitchedObj=Line.L156 action=close
+
+!Edit swtcontrol.s136 Action = open
+!Edit swtcontrol.s137 Action = open
+!Edit swtcontrol.s138 Action = open
+!Edit swtcontrol.s139 Action = open
+!Edit swtcontrol.s140 Action = open
+!Edit swtcontrol.s141 Action = open
+!Edit swtcontrol.s142 Action = open
+!Edit swtcontrol.s143 Action = open
+!Edit swtcontrol.s144 Action = open
+!Edit swtcontrol.s145 Action = open
+!Edit swtcontrol.s146 Action = open
+!Edit swtcontrol.s147 Action = open
+!Edit swtcontrol.s148 Action = open
+!Edit swtcontrol.s149 Action = open
+!Edit swtcontrol.s150 Action = open
+!Edit swtcontrol.s151 Action = open
+!Edit swtcontrol.s152 Action = open
+!Edit swtcontrol.s153 Action = open
+!Edit swtcontrol.s154 Action = open
+!Edit swtcontrol.s155 Action = open
+!Edit swtcontrol.s156 Action = open
+!Cond Ini = 319.986
+
+!Edit swtcontrol.s136 Action = open
+!Edit swtcontrol.s137 Action = open
+!Edit swtcontrol.s138 Action = open
+!Edit swtcontrol.s139 Action = open
+!Edit swtcontrol.s51 Action = open
+!Edit swtcontrol.s141 Action = open
+!Edit swtcontrol.s142 Action = open
+!Edit swtcontrol.s143 Action = open
+!Edit swtcontrol.s144 Action = open
+!Edit swtcontrol.s145 Action = open
+!Edit swtcontrol.s146 Action = open
+!Edit swtcontrol.s147 Action = open
+!Edit swtcontrol.s148 Action = open
+!Edit swtcontrol.s149 Action = open
+!Edit swtcontrol.s150 Action = open
+!Edit swtcontrol.s151 Action = open
+!Edit swtcontrol.s152 Action = open
+!Edit swtcontrol.s106 Action = open
+!Edit swtcontrol.s154 Action = open
+!Edit swtcontrol.s155 Action = open
+!Edit swtcontrol.s156 Action = open
+!285.43kW
+
+!Edit swtcontrol.s7 Action = open
+!Edit swtcontrol.s38 Action = open
+!Edit swtcontrol.s51 Action = open
+!Edit swtcontrol.s53 Action = open
+!Edit swtcontrol.s90 Action = open
+!Edit swtcontrol.s96 Action = open
+!Edit swtcontrol.s106 Action = open
+!Edit swtcontrol.s118 Action = open
+!Edit swtcontrol.s126 Action = open
+!Edit swtcontrol.s137 Action = open
+!Edit swtcontrol.s138 Action = open
+!Edit swtcontrol.s144 Action = open
+!Edit swtcontrol.s145 Action = open
+!Edit swtcontrol.s146 Action = open
+!Edit swtcontrol.s147 Action = open
+!Edit swtcontrol.s148 Action = open
+!Edit swtcontrol.s150 Action = open
+!Edit swtcontrol.s151 Action = open
+!Edit swtcontrol.s152 Action = open
+!Edit swtcontrol.s155 Action = open
+!Edit swtcontrol.s156 Action = open
+!Paper Nguyen=280.099kW
+
+!Edit swtcontrol.s7 Action = open
+!Edit swtcontrol.s38 Action = open
+!Edit swtcontrol.s51 Action = open
+!Edit swtcontrol.s53 Action = open
+!Edit swtcontrol.s90 Action = open
+!Edit swtcontrol.s96 Action = open
+!Edit swtcontrol.s106 Action = open
+!Edit swtcontrol.s118 Action = open
+!Edit swtcontrol.s126 Action = open
+!Edit swtcontrol.s137 Action = open
+!Edit swtcontrol.s138 Action = open
+!Edit swtcontrol.s144 Action = open
+!Edit swtcontrol.s145 Action = open
+!Edit swtcontrol.s146 Action = open
+!Edit swtcontrol.s147 Action = open
+!Edit swtcontrol.s148 Action = open
+!Edit swtcontrol.s150 Action = open
+!Edit swtcontrol.s151 Action = open
+!Edit swtcontrol.s144 Action = open
+!Edit swtcontrol.s155 Action = open
+!Edit swtcontrol.s156 Action = open
+!Luis Tesis=279.971kW
+
+!Edit swtcontrol.s137 Action = open
+!Edit swtcontrol.s96 Action = open
+!Edit swtcontrol.s138 Action = open
+!Edit swtcontrol.s145 Action = open
+!Edit swtcontrol.s146 Action = open
+!Edit swtcontrol.s7 Action = open
+!Edit swtcontrol.s150 Action = open
+!Edit swtcontrol.s118 Action = open
+!Edit swtcontrol.s141 Action = open
+!Edit swtcontrol.s135 Action = open
+!Edit swtcontrol.s142 Action = open
+!Edit swtcontrol.s90 Action = open
+!Edit swtcontrol.s147 Action = open
+!Edit swtcontrol.s106 Action = open
+!Edit swtcontrol.s51 Action = open
+!Edit swtcontrol.s155 Action = open
+!Edit swtcontrol.s126 Action = open
+!Edit swtcontrol.s144 Action = open
+!Edit swtcontrol.s151 Action = open
+!Edit swtcontrol.s148 Action = open
+!Edit swtcontrol.s35 Action = open
+!Jeon,kim=279.859
+
+!Edit swtcontrol.s137 Action = open
+!Edit swtcontrol.s96 Action = open
+!Edit swtcontrol.s138 Action = open
+!Edit swtcontrol.s145 Action = open
+!Edit swtcontrol.s84 Action = open
+!Edit swtcontrol.s7 Action = open
+!Edit swtcontrol.s150 Action = open
+!Edit swtcontrol.s118 Action = open
+!Edit swtcontrol.s141 Action = open
+!Edit swtcontrol.s156 Action = open
+!Edit swtcontrol.s53 Action = open
+!Edit swtcontrol.s90 Action = open
+!Edit swtcontrol.s147 Action = open
+!Edit swtcontrol.s106 Action = open
+!Edit swtcontrol.s51 Action = open
+!Edit swtcontrol.s128 Action = open
+!Edit swtcontrol.s126 Action = open
+!Edit swtcontrol.s144 Action = open
+!Edit swtcontrol.s151 Action = open
+!Edit swtcontrol.s148 Action = open
+!Edit swtcontrol.s139 Action = open
+!Abdelaziz=279.889
+
+!Edit swtcontrol.s7 Action = open
+!Edit swtcontrol.s35 Action = open
+!Edit swtcontrol.s51 Action = open
+!Edit swtcontrol.s90 Action = open
+!Edit swtcontrol.s95 Action = open
+!Edit swtcontrol.s106 Action = open
+!Edit swtcontrol.s118 Action = open
+!Edit swtcontrol.s126 Action = open
+!Edit swtcontrol.s135 Action = open
+!Edit swtcontrol.s137 Action = open
+!Edit swtcontrol.s138 Action = open
+!Edit swtcontrol.s141 Action = open
+!Edit swtcontrol.s142 Action = open
+!Edit swtcontrol.s144 Action = open
+!Edit swtcontrol.s145 Action = open
+!Edit swtcontrol.s146 Action = open
+!Edit swtcontrol.s147 Action = open
+!Edit swtcontrol.s148 Action = open
+!Edit swtcontrol.s150 Action = open
+!Edit swtcontrol.s151 Action = open
+!Edit swtcontrol.s155 Action = open
+!Swarnkar 2011=280.029kW
+
+!Edit swtcontrol.s7 Action = open
+!Edit swtcontrol.s35 Action = open
+!Edit swtcontrol.s51 Action = open
+!Edit swtcontrol.s90 Action = open
+!Edit swtcontrol.s96 Action = open
+!Edit swtcontrol.s106 Action = open
+!Edit swtcontrol.s118 Action = open
+!Edit swtcontrol.s126 Action = open
+!Edit swtcontrol.s135 Action = open
+!Edit swtcontrol.s137 Action = open
+!Edit swtcontrol.s138 Action = open
+!Edit swtcontrol.s141 Action = open
+!Edit swtcontrol.s142 Action = open
+!Edit swtcontrol.s144 Action = open
+!Edit swtcontrol.s145 Action = open
+!Edit swtcontrol.s146 Action = open
+!Edit swtcontrol.s147 Action = open
+!Edit swtcontrol.s148 Action = open
+!Edit swtcontrol.s150 Action = open
+!Edit swtcontrol.s151 Action = open
+!Edit swtcontrol.s155 Action = open
+!Carreno 2008=279.859kW
+
+!Edit swtcontrol.s7 Action = open
+!Edit swtcontrol.s139 Action = open
+!Edit swtcontrol.s51 Action = open
+!Edit swtcontrol.s90 Action = open
+!Edit swtcontrol.s96 Action = open
+!Edit swtcontrol.s106 Action = open
+!Edit swtcontrol.s118 Action = open
+!Edit swtcontrol.s126 Action = open
+!Edit swtcontrol.s156 Action = open
+!Edit swtcontrol.s137 Action = open
+!Edit swtcontrol.s138 Action = open
+!Edit swtcontrol.s141 Action = open
+!Edit swtcontrol.s53 Action = open
+!Edit swtcontrol.s144 Action = open
+!Edit swtcontrol.s145 Action = open
+!Edit swtcontrol.s84 Action = open
+!Edit swtcontrol.s147 Action = open
+!Edit swtcontrol.s148 Action = open
+!Edit swtcontrol.s150 Action = open
+!Edit swtcontrol.s151 Action = open
+!Edit swtcontrol.s128 Action = open
+!Swarnkar 2011=279.889kW
+
+!Edit swtcontrol.s7 Action = open
+!Edit swtcontrol.s38 Action = open
+!Edit swtcontrol.s51 Action = open
+!Edit swtcontrol.s53 Action = open
+!Edit swtcontrol.s90 Action = open
+!Edit swtcontrol.s96 Action = open
+!Edit swtcontrol.s106 Action = open
+!Edit swtcontrol.s118 Action = open
+!Edit swtcontrol.s126 Action = open
+!Edit swtcontrol.s137 Action = open
+!Edit swtcontrol.s138 Action = open
+!Edit swtcontrol.s144 Action = open
+!Edit swtcontrol.s145 Action = open
+!Edit swtcontrol.s146 Action = open
+!Edit swtcontrol.s147 Action = open
+!Edit swtcontrol.s148 Action = open
+!Edit swtcontrol.s150 Action = open
+!Edit swtcontrol.s151 Action = open
+!Edit swtcontrol.s152 Action = open
+!Edit swtcontrol.s155 Action = open
+!Edit swtcontrol.s156 Action = open
+!Nguyen 2021=280.099kW
+
+!Comprobar
+!Edit swtcontrol.s137 Action = open
+!Edit swtcontrol.s90 Action = open
+!Edit swtcontrol.s148 Action = open
+!Edit swtcontrol.s126 Action = open
+!Edit swtcontrol.s128 Action = open
+!Edit swtcontrol.s145 Action = open
+!Edit swtcontrol.s144 Action = open
+!Edit swtcontrol.s147 Action = open
+!Edit swtcontrol.s150 Action = open
+!Edit swtcontrol.s151 Action = open
+!Edit swtcontrol.s135 Action = open
+!Edit swtcontrol.s84 Action = open
+!Edit swtcontrol.s51 Action = open
+!Edit swtcontrol.s7 Action = open
+!Edit swtcontrol.s138 Action = open
+!Edit swtcontrol.s38 Action = open
+!Edit swtcontrol.s53 Action = open
+!Edit swtcontrol.s118 Action = open
+!Edit swtcontrol.s95 Action = open
+!Edit swtcontrol.s141 Action = open
+!Edit swtcontrol.s126 Action = open
+
+!Deixe o openDSS estimar as bases de tensao
+Set Voltagebases =[13.8]    !Bases legais para este problema
+
+Calcvoltagebases
+
+ Set maxiterations = 100 ! as vezes, esse modelo precisa de mais do que as 15 iteracoes padrao
+
+!Solve !Este comando resolve o fluxo de energia do caso base
+!show voltages
+!show losses
+

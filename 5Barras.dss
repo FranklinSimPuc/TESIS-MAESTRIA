@@ -1,0 +1,56 @@
+//.........................................................//
+// Nombre: Franklin Jesus                       //
+// Apellidos: Simeon Pucuhuayla             //
+// SISTEMA DE PRUEBA DE 5 BARRAS  //
+// FIEE - UNI                                        //
+//........................................................//
+
+
+Clear
+Set DefaultBaseFrequency=60
+
+//-------------------------------CIRCUITO-----------------------------------------//
+new object=circuit.5_Barras bus1=barra1 basemva=1 basekv=1 
+pu=1.05 MVAsc3=20000 MVAsc1=21000
+
+// ------------------ L�neas trif�sicas equilibradas --------------------- //
+new line.l1 phases=3 bus1=barra1 bus2=barra2 length= 1 units=km
+~ r1 =0.0066 x1=0.0033
+
+new line.l2 phases=3 bus1=barra1 bus2=barra3 length= 1 units=km
+~ r1 =0.0016 x1=0.0006
+
+new line.l3 phases=3 bus1=barra2 bus2=barra3 length= 1 units=km
+~ r1 =0.0003 x1=0.0002
+
+new line.l4 phases=3 bus1=barra2 bus2=barra4 length= 1 units=km
+~ r1 =0.0051 x1=0.0005
+
+new line.l5 phases=3 bus1=barra3 bus2=barra4 length=1 units=km
+~ r1 =0.0005 x1=0.0005
+
+new line.l6 phases=3 bus1=barra3 bus2=barra5 length= 1 units=km
+~ r1 =0.0027 x1=0.0012
+
+new line.l7 phases=3 bus1=barra4 bus2=barra5 length= 1 units=km
+~ r1 =0.0033 x1=0.0015
+
+
+// --  Cargas -- //
+
+New load.load2 bus1=barra2 phases=3  kw=1280.0 kvar=1280.0  model=1 kv=1 Conn=delta
+New load.load3 bus1=barra3 phases=3  kw=320.0 kvar=160.0  model=1 kv=1 Conn=delta
+New load.load4 bus1=barra4 phases=3  kw=1600.0 kvar=800.0  model=1 kv=1 Conn=delta
+New load.load5 bus1=barra5 phases=3  kw=740.0 kvar=370.0  model=1 kv=1 Conn=delta
+
+// --  Interruptores -- //
+
+New swtcontrol.S1 SwitchedObj=Line.L1 action=close
+New swtcontrol.S2 SwitchedObj=Line.L2 action=close
+New swtcontrol.S3 SwitchedObj=Line.L3 action=close
+New swtcontrol.S4 SwitchedObj=Line.L4 action=close
+New swtcontrol.S5 SwitchedObj=Line.L5 action=close
+New swtcontrol.S6 SwitchedObj=Line.L6 action=close
+New swtcontrol.S7 SwitchedObj=Line.L7 action=close
+
+!Solve
